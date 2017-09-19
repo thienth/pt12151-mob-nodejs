@@ -6,6 +6,7 @@
   </head>
   <body>
     <h1><%= title %></h1>
+    <a href="/create-product" title="">Add User</a>
     <%
     	for(var i = 0; i < data.length; i++){
     %>
@@ -13,6 +14,7 @@
 			<h2><%= data[i].name%></h2>
 			<strong><%= data[i].price%></strong>
 			<p><%= data[i].detail%></p>
+			<a href="/remove-product/<%=data[i].id%>">Remove</a>
 		</div>
 	<%}%>
 

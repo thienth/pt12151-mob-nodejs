@@ -33,6 +33,18 @@
 	vào bảng category với dữ liệu lấy được
 	8.3 Thực thi câu lệnh trên với mysql và điều hướng website 
 	về trang chủ localhost:3000
+11 xử lý code trang xoá danh mục 
+	localhost:3000/delete-cate/:id
+	11.1 Lấy id từ trên url xuống
+	11.2 thực hiện xoá hết bài viết 
+	thuộc về danh mục có id tương ứng
+	11.3 xoá danh mục và điều hướng về trang chủ
+
+
+*** đối với bảng post làm tương tự 
+nhưng có thêm 1 lưu ý khi thực hiện thêm hoặc cập nhật
+bài viết thì nên tạo 1 thẻ select để người dùng có thể chọn
+1 danh mục đã có sẵn chữ k nên để người ta viết số vào
 
 
 

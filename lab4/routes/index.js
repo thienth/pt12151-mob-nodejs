@@ -14,5 +14,22 @@ router.get('/', function(req, res, next) {
     });
   });
 });
+router.get('/add-category', function(req, res, next) {
+
+    res.render('cate/add', { 
+      title: 'Danh sách danh mục'
+    });
+});
+router.post('/save-add-category', function(req, res, next) {
+	var sql = "insert into category (name, `desc`) values ";
+		sql += "('"+req.body.name+"', '"+req.body.desc+"')";
+				
+    dbConnect.query(sql, 
+        function (err, rows, fields) {
+	    if (err) throw err
+
+	    res.redirect('/');
+  	});
+});
 
 module.exports = router;

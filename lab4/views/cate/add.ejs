@@ -5,12 +5,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<link rel="stylesheet" href="">
+
 </head>
 <body>
-	<form action="/save-add-category" method="post">
+	<form action="/save-add-category" method="post" novalidate>
 		<div>
 			Tên danh mục
-			<input type="text" name='name' placeholder="Tên danh mục">
+			<input required type="text" name='name' placeholder="Tên danh mục">
+		</div>
+		<div>
+			Danh mục cha
+			<select name="parent_id">
+				<option value="">-- Hay choj 1 danh muc --</option>
+				<option value="1">Danh muc 1</option>
+				<option value="2">Danh muc 2</option>
+				<option value="3">Danh muc 3</option>
+				<option value="4">Danh muc 4</option>
+				<option value="5">Danh muc 5</option>
+			</select>
 		</div>
 		<div>
 			Mô tả
@@ -21,5 +33,39 @@
 			<button type="submit">Lưu</button>
 		</div>
 	</form>
+
+	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="javascripts/additional-methods.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('form').validate({
+				rules:{
+					name: {
+						required: true,
+						minlength: 6
+					},
+					desc:{
+						required: true
+					},
+					parent_id:{
+						required: true
+					}
+				},
+				messages: {
+					name:{
+						required: "hay dien thong tin cho ten san pham",
+						minlength: "ten san pham co it nhat 6 ky tu"
+					},
+					desc:{
+						required: "hay dien mo ta"
+					}
+				}
+			});
+		});
+
+
+
+	</script>
 </body>
 </html>

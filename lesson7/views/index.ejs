@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="/create-product" title="">Add User</a>
+    <%
+    	for(var i = 0; i < data.length; i++){
+    %>
+		<div style="float:left; width: 33%; border: 1px solid #ccc;">
+			<h2><%= data[i].name%></h2>
+      <img src="<%=data[i].feature_image%>" width="200px">
+			<strong><%= data[i].price%></strong>
+			<p><%= data[i].detail%></p>
+      <a href="/update-product/<%=data[i].id%>">Update</a>
+			<a href="/remove-product/<%=data[i].id%>">Remove</a>
+		</div>
+	<%}%>
+
+  </body>
+</html>

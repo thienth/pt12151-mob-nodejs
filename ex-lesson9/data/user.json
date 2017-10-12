@@ -1,0 +1,14 @@
+[
+	{
+		"username": "thienth",
+		"password": "123456",
+		"avatar": "https://www.3wallpapers.fr/wp-content/uploads/2016/12/Sexy-Girl-In-Red-3Wallpapers-iPhone-Parallax.jpg",
+		"roles": ["admin"]
+	},
+	{
+		"username": "hoclv",
+		"password": "654321",
+		"avatar": "https://www.3wallpapers.fr/wp-content/uploads/2016/12/Sexy-Girl-In-Red-3Wallpapers-iPhone-Parallax.jpg",
+		"roles": ["moderator", "author"]
+	}
+]
